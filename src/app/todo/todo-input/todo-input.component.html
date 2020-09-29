@@ -1,0 +1,9 @@
+<p>
+<input #newTask placeholder="add a new task here..."
+(keyup.enter)="addTasks(newTask.value)" 
+(blur)="addTasks(newTask.value); newTask.value=''"><br>
+<button (click)="addTasks(newTask.value)"(click)="incrementOnSubmit()">+</button>
+</p>
+<ul><li *ngFor="let task of tasks">{{task | uppercase}}</li></ul>
+
+<p class="counter">NUMBER OF TASKS = {{count}}  </p>
